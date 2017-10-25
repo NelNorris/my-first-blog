@@ -1,0 +1,321 @@
+/* General page styling */
+html {
+	height: 100%;
+}
+body {
+	background-color: #ffffff;
+	color: #333333;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+.container-fluid, .container {
+	padding: 0;
+}
+.container-fluid {
+	border-bottom: 2px solid #00b32d;
+	opacity: 0.99;
+	min-height: 100%;
+}
+.container {
+	width: 100%;
+	max-width: 750px;
+}
+.row {
+	width: 100%;
+	max-width: 750px;
+	height: auto;
+	margin: 1em auto 1em;
+	padding: 0;
+}
+.bamboo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: url('bamboo_place.jpg') no-repeat;
+	background-position: bottom right;
+	width: 20%;
+	height: 100%;
+	background-size: 100% auto;
+}
+main {
+	opacity: 0.99;
+}
+main > .container {
+	background: rgba(225,225,225,0.5);
+	border-radius: 10px;
+	border: 2px solid #e7e7e7;
+	margin: 40px auto 80px;
+	padding: 0 40px 40px;
+}
+
+p {
+	font-family: Lato, verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Karla, courier, serif;
+}
+h1, h2 {
+	text-align: center;
+}
+
+a {
+	color: #b77534;
+}
+a:hover, a:active, a:focus {
+	color: #3434b7;
+	text-decoration: none;
+}
+.emph {
+	text-transform: uppercase;
+}
+
+/* Navigation */
+.navbar-default {
+	background-color: #ffffff;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid #f2e6d9;
+}
+.navbar-default .container .row .navbar-header {
+	height: 80px;
+	padding-left: 100px;
+	margin-left: 0;
+	background: url('panda_place.jpg') no-repeat;
+	background-position: left center;
+	background-size: auto 100%;
+}
+.navbar-default .container .row .navbar-header a {
+	font-family: Lobster, courier, cursive;
+	color: #d2a679;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 2.8em;
+	margin-left: 0;
+}
+.navbar-default .container .row .navbar-nav {
+	float: right;
+}
+.navbar-default .container .row .navbar-nav a {
+	line-height: 40px;
+	font-family: Josefin Slab, courier, serif;
+	color: #666666;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.navbar-default .container .row .navbar-header a:hover, .navbar-default .container .row .navbar-header a:active, .navbar-default .container .row .navbar-header a:focus, .navbar-default .container .row .navbar-nav a:hover, .navbar-default .container .row .navbar-nav a:active, .navbar-default .container .row .navbar-nav a:focus {
+	color: #1b1b7e;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	position: absolute;
+	padding: 1em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 1em;
+	border-top: 1px solid #e7e7e7;
+}
+
+/* 2014 doodle styling */
+.doodle {
+	text-align: center;
+}
+
+.doodle .panel {
+	padding: 3em;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+.doodle .picture-container {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.doodle .picture-container p {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 0px;
+	margin: 1.8em auto 1.8em;
+}
+.doodle img#picture {
+	width: auto;
+	height: auto;
+	max-width: 400px;
+	max-width: 400px;
+	display: block;
+	margin: 0 auto 15px;
+}
+.doodle .arrow-container {
+	width: 100%;
+	color: #00994d;
+	margin: 10px auto;
+}
+.doodle .arrow {
+	width: 50%;
+}
+.doodle #prev {
+	display: inline;
+	float: left;
+	text-align: left;
+	cursor: pointer;
+}
+.doodle #next {
+	display: inline;
+	float: right;
+	text-align: right;
+	cursor: pointer;
+}
+
+.doodle table.calendar {
+	margin: 0 auto;
+	font-size: 0.6em;
+	color: #a1a1a1;
+	font-weight: bold;
+}
+.doodle .calendar td {
+	padding: 0.5em 0 1.2em;
+	margin: 2em 0;
+	border-bottom: 1px solid #e7e7e7;
+	cursor: pointer;
+	opacity: 0.25;
+}
+.doodle .calendar td.selected {
+	opacity: 1;
+	color: #333333;
+}
+.doodle .calendar-display {
+	margin: 0 auto;
+	width: 600px;
+	height: 700px;
+	overflow: hidden;
+	margin-bottom: 5em;
+}
+.doodle .calendar-scroll {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 7200px;
+	height: 600px;
+}
+.doodle .month {
+	position: absolute;
+	top: 0;
+	width: 600px;
+	height: 800px;
+}
+
+.doodle .month h3 {
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+#jan {
+	left: 0px;
+}
+#feb {
+	left: 600px;
+}
+#mar {
+	left: 1200px;
+}
+#apr {
+	left: 1800px;
+}
+#may {
+	left: 2400px;
+}
+#jun {
+	left: 3000px;
+}
+#jul {
+	left: 3600px;
+}
+#aug {
+	left: 4200px;
+}
+#sep {
+	left: 4800px;
+}
+#oct {
+	left: 5400px;
+}
+#nov {
+	left: 6000px;
+}
+#dec {
+	left: 6600px;
+}
+
+.doodle .calendar-list {
+	position: relative;
+	list-style: none;
+	padding: 1em 0;
+}
+.doodle .calendar-list li {
+	display: inline;
+	margin-right: 0.8em;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #a5a5a5;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.doodle .calendar-list .active {
+	color: #666666;
+}
+.doodle #calendar-prev, .doodle #calendar-next {
+	font-size: 2em;
+}
+
+/* Blog post styling */
+.post {
+	padding: 10px 0;
+	border-top: 1px solid #666666;
+}
+.post:first-child {
+	border-top: 0;
+}
+.post h2 {
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 0px;
+}
+.post h3 {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.post img {
+	max-width: 500px;
+	margin: 0 auto 10px;
+	display: block;
+	border: 0;
+	text-align: center;
+}
+.post .caption {
+	font-size: 0.7em;
+	text-align: center;
+	font-style: italic;
+	color: #868686;
+}
+.post .date {
+	font-size: 0.7em;
+	color: #868686;
+	margin-bottom: 4px;
+}
+.post li {
+	margin-bottom: 8px;
+}
