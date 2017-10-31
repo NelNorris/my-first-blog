@@ -1,6 +1,38 @@
 {% extends 'home/index.html' %}
 
+{% block title %}
+	Home | Nel Norris
+{% endblock %}
+
+{% block pagetitle %}
+	<h1>Home</h1>
+{% endblock %}
+
 {% block content %}
-	<h1>Nel Norris</h1>
-	<p>Under construction</p>
+	<div class="col-xs-12 col-sm-8 about">
+		<h2>About</h2>
+		<p>I am a British front-end developer in Singapore. My degree is in music and my hobbies are painting and weight lifting. See my blog for musings on web development, films, and videogames.</p>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<div class="social">
+			<p><a href="https://twitter.com/NelNorris" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></p>
+		</div>
+		<div class="social">
+			<p><a href="https://www.linkedin.com/in/elizabeth-norris-217b9698/" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a></p>
+		</div>
+		<div class="social">
+			<p><a href="https://github.com/NelNorris" target="_blank"><i class="fa fa-github-alt"></i> Github</a></p>
+		</div>
+		<div class="social">
+			<p><a href="https://soundcloud.com/nellie-norris" target="_blank"><i class="fa fa-soundcloud"></i> Soundcloud</a></p>
+		</div>
+	</div>
+	<div class="col-xs-12 update">
+		<h2>Latest</h2>
+		<h3>{{ update.title }}</h3>
+		{% if update.published_date %}
+			<p class="date">{{ update.published_date }}</p>
+		{% endif %}
+		{{ update.content|safe }}
+	</div>
 {% endblock %}

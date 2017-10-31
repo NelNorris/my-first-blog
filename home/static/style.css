@@ -12,13 +12,15 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.container-fluid.main {
+	position: relative;
+	left: 0;
+	top: 0;
+	min-height: 100%;
+	border-bottom: 2px solid #00b32d;
+}
 .container-fluid, .container {
 	padding: 0;
-}
-.container-fluid {
-	border-bottom: 2px solid #00b32d;
-	opacity: 0.99;
-	min-height: 100%;
 }
 .container {
 	width: 100%;
@@ -44,6 +46,10 @@ body {
 main {
 	opacity: 0.99;
 }
+main .container-fluid {
+	opacity: 0.99;
+	min-height: 100%;
+}
 main > .container {
 	background: rgba(225,225,225,0.5);
 	border-radius: 10px;
@@ -52,11 +58,18 @@ main > .container {
 	padding: 0 40px 40px;
 }
 
-p {
+p, li {
 	font-family: Lato, verdana, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	font-family: Josefin Slab, courier, serif;
+}
+
+h2 {
+	font-family: Lobster, courier, cursive;
+}
+h3, h4, h5, h6 {
 	font-family: Karla, courier, serif;
 }
 h1, h2 {
@@ -113,14 +126,66 @@ a:hover, a:active, a:focus {
 
 /* Footer */
 footer {
-	width: 100%;
 	position: absolute;
-	padding: 1em;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	width: 100%;
 	margin-top: 1em;
-	border-top: 1px solid #e7e7e7;
+}
+footer .social {
+	text-align: center;
+}
+
+/* Home page and Post update styling */
+.social:first-child {
+	margin-top: 1em;
+}
+.social p {
+	font-size: 1.2em;
+}
+.social i {
+	margin-right: 1em;
+	font-size: 1.8em;
+}
+.update {
+	margin-top: 40px;
+	border-top: 1px solid #f2e6d9;
+	padding: 20px;
+}
+.update h2 {
+	margin-top: 0;
+}
+.update h3 {
+	font-family: Karla, courier, serif;
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 0px;
+}
+.update .date {
+	font-size: 0.7em;
+	color: #868686;
+	margin-bottom: 4px;
+}
+
+.archive {
+	padding: 10px 0;
+	border-top: 1px solid #666666;
+}
+
+.archive:first-child {
+	border-top: 0;
+}
+.archive h2 {
+	font-family: Karla, courier, serif;
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 0px;
+}
+.archive .date {
+	font-size: 0.7em;
+	color: #868686;
+	margin-bottom: 4px;
 }
 
 /* 2014 doodle styling */
@@ -288,6 +353,7 @@ footer {
 	border-top: 0;
 }
 .post h2 {
+	font-family: Karla, courier, serif;
 	text-align: left;
 	font-size: 1.2em;
 	margin-bottom: 0px;
@@ -315,6 +381,23 @@ footer {
 	font-size: 0.7em;
 	color: #868686;
 	margin-bottom: 4px;
+}
+.post .return {
+	text-align: right;
+	font-family: Josefin Slab, courier, serif;
+	text-transform: uppercase;
+}
+.post .return a {
+	padding: 5px 10px;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+.post .return a:hover, .post .return a:focus, .post .return a:active {
+	background-color: #3434b7;
+	color: #ffffff;
+}
+.post .return i {
+	font-size: 1.1em;
 }
 .post li {
 	margin-bottom: 8px;
