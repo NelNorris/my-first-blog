@@ -1,0 +1,144 @@
+.doodle {
+	text-align: center;
+	.panel {
+		padding: $xxl_font;
+		background-color: transparent;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.picture-container {
+		position: relative;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		p {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			margin: $l_font auto;
+		}
+	}
+	#picture {
+		width: auto;
+		height: auto;
+		max-width: 400px;
+		max-height: 400px;
+		display: block;
+		margin: 0 auto;
+	}
+	.arrow-container {
+		width: 100%;
+		color: $subheaddark;
+		margin: $m_space auto;
+		.arrow {
+			width: 50%;
+			display: inline;
+			cursor: pointer;
+			&#prev {
+				float: left;
+				text-align: left;
+			}
+			&#next {
+				float: right;
+				text-align: right;
+			}
+		}
+	}
+	.calendar {
+		margin: 0 auto;
+		font-size: $xs_font;
+		color: $articlecolour;
+		font-weight: bold;
+		td {
+			padding: $xs_space 0 $m_space;
+			margin: $xl_font;
+			border-bottom: $border_thin solid $bordercolour;
+			cursor: pointer;
+			opacity: 0.25;
+			&.selected {
+				opacity: 1;
+				color: $maintextcolour;
+			}
+		}
+	}
+	.calendar-display {
+		margin: 0 auto;
+		width: 600px;
+		height: 700px;
+		overflow: hidden;
+		margin-bottom: $big_space;
+		.calendar-scroll {
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 7200px;
+			height: 600px;
+			.month {
+				position: absolute;
+				top: 0;
+				width: 600px;
+				height: 800px;
+				&#jan {
+					left: 0px;
+				}
+				&#feb {
+					left: 600px;
+				}
+				&#mar {
+					left: 1200px;
+				}
+				&#apr {
+					left: 1800px;
+				}
+				&#may {
+					left: 2400px;
+				}
+				&#jun {
+					left: 3000px;
+				}
+				&#jul {
+					left: 3600px;
+				}
+				&#aug {
+					left: 4200px;
+				}
+				&#sep {
+					left: 4800px;
+				}
+				&#oct {
+					left: 5400px;
+				}
+				&#nov {
+					left: 6000px;
+				}
+				&#dec {
+					left: 6600px;
+				}
+				h3 {
+					margin-bottom: $m_font;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.calendar-list {
+		position: relative;
+		list-style: none;
+		padding: $m_font 0;
+		li {
+			display: inline;
+			margin-right: $s_space;
+			font-size: $s_font;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $articlelight;
+			&.active {
+				color: $subheadcolour;
+			}
+		}
+		#calendar-prev, #calendar-next {
+			font-size: $xl_font;
+		}
+	}
+}

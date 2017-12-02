@@ -1,0 +1,57 @@
+// Colours
+
+$pandablack: #000000;
+$backgroundcolour: #ffffff;
+$maintextcolour: #333333;
+$articlecolour: #a1a1a1;
+$articlelight: #a5a5a5;
+$subheadcolour: #666666;
+$subheadlight: #868686;
+$subheaddark: #00994d;
+$brandcolour: #00b32d;
+$brandlight: #1b1b7e;
+$contrastcolour: #f2e6d9;
+$contrastdark: #d2a679;
+$anchorcolour: #b77534;
+$anchoraccent: #3434b7;
+$bordercolour: #e7e7e7;
+$translucent: rgba(225,225,225,0.5);
+
+// Fonts
+$bodytext: Lato, verdana, sans-serif;
+$headtext: Josefin Slab, courier, serif;
+$brandtext: Lobster, courier, cursive;
+$subhead: Karla, courier, serif;
+
+// Font size
+$xs_font: 0.6em;
+$s_font: 0.7em;
+$m_font: 1em;
+$mm_font: 1.1em;
+$mmm_font: 1.2em;
+$ml_font: 1.5em;
+$l_font: 1.8em;
+$xl_font: 2em;
+$xxl_font: 2.8em;
+
+// Spacing
+$xxs_space: 4px;
+$xs_space: 5px;
+$s_space: 8px;
+$m_space: 10px;
+$l_space: 18px;
+$xl_space: 28px;
+$xxl_space: 40px;
+$big_space: 80px;
+
+$central_container: 750px;
+
+// Border
+$border_thin: 1px;
+$border_thick: 2px;
+
+// Images
+$panda: '../panda_place.jpg';
+$panda_width: 100px;
+$panda_height: 80px;
+$bamboo: '../bamboo_place.jpg';

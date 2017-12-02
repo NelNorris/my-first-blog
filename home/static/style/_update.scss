@@ -1,0 +1,25 @@
+.update {
+	margin-top: $xxl_space;
+	border-top: $border_thin solid $contrastcolour;
+	h2 {
+		margin-top: 0;
+	}
+	h3 {
+		text-align: left;
+		font-size: $mmm_font;
+		margin-bottom: 0;
+	}
+}
+.archive {
+	padding: $m_space;
+	border-top: $border_thin solid $subheadcolour;
+	&:first-child {
+		border-top: 0;
+	}
+	h2 {
+		font-family: $subhead;
+		text-align: left;
+		font-size: $mmm_font;
+		margin-bottom: 0;
+	}
+}

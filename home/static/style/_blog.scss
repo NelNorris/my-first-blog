@@ -1,0 +1,59 @@
+.post {
+	padding: $m_space 0;
+	border-top: $border_thin solid $subheadcolour;
+	&:first-child {
+		border-top: 0;
+	}
+	h2 {
+		font-family: $subhead;
+		text-align: left;
+		font-size: $mmm_font;
+		margin-bottom: 0;
+	}
+	h3 {
+		text-align: center;
+		font-size: $ml_font;
+		font-weight: bold;
+	}
+	img {
+		max-width: 500px;
+		margin: 0 auto $m_space;
+		display: block;
+		border: 0;
+		text-align: center;
+	}
+	li {
+		margin-bottom: $s_space;
+	}
+	.caption {
+		font-size: $s_font;
+		color: $subheadlight;
+		text-align: center;
+		font-style: italic;
+	}
+	.return {
+		text-align: right;
+		font-family: $headtext;
+		text-transform: uppercase;
+		a {
+			padding: $xs_space $m_space;
+			background-color: $backgroundcolour;
+			border-radius: $xs_space;
+			&:focus {
+				background-color: $anchoraccent;
+				color: $backgroundcolour;
+			}
+			&:hover {
+				background-color: $anchoraccent;
+				color: $backgroundcolour;
+			}
+			&:active {
+				background-color: $anchoraccent;
+				color: $backgroundcolour;
+			}
+		}
+		i {
+			font-size: $mm_font;
+		}
+	}
+}
