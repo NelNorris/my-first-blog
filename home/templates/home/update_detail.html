@@ -9,15 +9,17 @@
 {% endblock %}
 
 {% block content %}
-	<div class="archive">
-		<h3>{{ update.title }}</h3>
-		{% if update.published_date %}
-			<p class="date">{{ update.published_date }}</p>
-		{% endif %}
-		{{ update.content|safe }}
-		<br />
-		<p class="arrow previous"><a href="" title="Previous post"><i class="fa fa-chevron-left"></i></p>
-		<p class="return"><a href="/blog">Back to archive &nbsp; <i class="fa fa-angle-double-right"></i></a></p>
-		<p class="arrow next"><a href="" title="Next post"><i class="fa fa-chevron-next"></i></p>
-	</div>
+	<article>
+		<div class="archive">
+			<h3>{{ update.title }}</h3>
+			{% if update.published_date %}
+				<p class="date">{{ update.published_date }}</p>
+			{% endif %}
+			{{ update.content|safe }}
+			<br />
+			<p class="arrow previous"><a href="" title="Previous post"><i class="fa fa-chevron-left"></i></p>
+			<p class="return"><a href="/blog">Back to archive &nbsp; <i class="fa fa-angle-double-right"></i></a></p>
+			<p class="arrow next"><a href="" title="Next post"><i class="fa fa-chevron-next"></i></p>
+		</div>
+	</article>
 {% endblock %}

@@ -154,6 +154,8 @@ footer {
     text-align: center;
     font-size: 1.5em;
     font-weight: bold; }
+  .post h4 {
+    margin-top: 2em; }
   .post img {
     max-width: 500px;
     margin: 0 auto 10px;
@@ -340,8 +342,7 @@ footer {
         transition: transform 0.7s; }
     nav.navbar.navbar-default .container .row .navbar-header .navbar-brand {
       padding-top: 28px;
-      padding-left: 0;
-      font-size: 2em; }
+      padding-left: 0; }
     nav.navbar.navbar-default .container .row .navbar-header .navbar-nav li:hover {
       background-color: #3434b7;
       border-radius: 5px; }
@@ -383,5 +384,8 @@ footer {
     padding: 1em; }
   main .doodle .calendar-display {
     display: none; } }
+@media screen and (max-width: 576px) {
+  nav.navbar.navbar-default .container .row .navbar-header .navbar-brand {
+    font-size: 2em; } }
 
 /*# sourceMappingURL=style.css.map */

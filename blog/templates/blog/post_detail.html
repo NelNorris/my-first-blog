@@ -9,13 +9,17 @@
 {% endblock %}
 
 {% block content %}
-	<div class="post">
-		<h3>{{ post.title }}</h3>
-		{% if post.published_date %}
-			<p class="date">{{ post.published_date }}</p>
-		{% endif %}
-		{{ post.text|safe }}
-		<br />
-		<p class="return"><a href="/blog">Back to blog &nbsp; <i class="fa fa-angle-double-right"></i></a></p>
-	</div>
+	<article>
+		<div class="post">
+			<header>
+				<h3>{{ post.title }}</h3>
+			</header>
+			{% if post.published_date %}
+				<p class="date">{{ post.published_date }}</p>
+			{% endif %}
+			{{ post.text|safe }}
+			<br />
+			<p class="return"><a href="/blog">Back to blog &nbsp; <i class="fa fa-angle-double-right"></i></a></p>
+		</div>
+	</article>
 {% endblock %}

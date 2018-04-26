@@ -14,12 +14,14 @@
 		<p>I am a British front-end developer in Singapore. My degree is in music and my hobbies are painting and weight lifting. See my blog for musings on web development, films, and videogames.</p>
 		<p>I made this website primarily using a <a href="https://djangogirls.org/" target="_blank">Django Girls</a> tutorial. They aim to help women get into tech and host workshops all over the world. They're volunteer-run and do good work, so please consider checking them out and donating to the organisation.</p>
 	</div>
-	<div class="col-xs-12 update">
-		<h2>Latest</h2>
-		<h3>{{ update.title }}</h3>
-		{% if update.published_date %}
-			<p class="date">{{ update.published_date }}</p>
-		{% endif %}
-		{{ update.content|safe }}
-	</div>
+	<article>
+		<div class="col-xs-12 update">
+			<h2>Latest</h2>
+			<h3>{{ update.title }}</h3>
+			{% if update.published_date %}
+				<p class="date">{{ update.published_date }}</p>
+			{% endif %}
+			{{ update.content|safe }}
+		</div>
+	</article>
 {% endblock %}
