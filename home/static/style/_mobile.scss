@@ -68,6 +68,10 @@
 			padding-top: $xxl_space;
 		}
 		.post {
+			header {
+				background: transparent;
+				border-bottom: 0;
+			}
 			.return {
 				a {
 					background-color: $anchoraccent;
