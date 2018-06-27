@@ -43,6 +43,7 @@ html {
 		}
 		p, li {
 			font-family: $bodytext;
+			line-height: $mmm_font;
 		}
 		h1 {
 			font-family: $headtext;
@@ -84,7 +85,7 @@ html {
 		.date {
 			font-size: $s_font;
 			color: $subheadlight;
-			margin-bottom: $xxs_space;
+			margin-bottom: $m_space;
 		}
 		.small {
 			font-size: $s_font;
@@ -126,16 +127,19 @@ nav.navbar.navbar-default {
 					font-weight: bold;
 					&:hover {
 						color: $anchoraccent;
+						text-decoration: underline;
 						transition: color 0.35s;
 						-webkit-transition: color 0.35s;
 					}
 					&:focus {
 						color: $anchoraccent;
+						text-decoration: underline;
 						transition: color 0.35s;
 						-webkit-transition: color 0.35s;
 					}
 					&:active {
 						color: $anchoraccent;
+						text-decoration: underline;
 						transition: color 0.35s;
 						-webkit-transition: color 0.35s;
 					}
