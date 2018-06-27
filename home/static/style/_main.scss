@@ -63,16 +63,19 @@ html {
 				text-decoration: none;
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 			&:focus {
 				text-decoration: none;
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 			&:active {
 				text-decoration: none;
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 		}
 		.emph {
@@ -122,27 +125,36 @@ nav.navbar.navbar-default {
 					text-transform: uppercase;
 					font-weight: bold;
 					&:hover {
-						color: $brandlight;
+						color: $anchoraccent;
+						transition: color 0.35s;
+						-webkit-transition: color 0.35s;
 					}
 					&:focus {
-						color: $brandlight;
+						color: $anchoraccent;
+						transition: color 0.35s;
+						-webkit-transition: color 0.35s;
 					}
 					&:active {
-						color: $brandlight;
+						color: $anchoraccent;
+						transition: color 0.35s;
+						-webkit-transition: color 0.35s;
 					}
 				}
 			}
 			.navbar-brand:focus {
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 			.navbar-brand:hover {
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 			.navbar-brand:active {
 				color: $anchoraccent;
 				transition: color 0.35s;
+				-webkit-transition: color 0.35s;
 			}
 		}
 	}
