@@ -81,6 +81,9 @@ html body a:active {
   transition: color 0.35s;
   -webkit-transition: color 0.35s;
 }
+html body br {
+  font-family: sans-serif;
+}
 html body .emph {
   text-transform: uppercase;
 }
@@ -168,7 +171,7 @@ main .container-fluid {
   min-height: 100%;
 }
 main .content {
-  background: rgba(225, 225, 225, 0.5);
+  background: rgba(235, 235, 225, 0.5);
   border-radius: 10px;
   border: 2px solid #e7e7e7;
   margin: 40px auto 80px;
@@ -436,6 +439,9 @@ footer .social i {
   nav.navbar.navbar-default {
     margin-bottom: 0;
   }
+  nav.navbar.navbar-default .container .row .navbar-header {
+    padding-left: 80px;
+  }
   nav.navbar.navbar-default .container .row .navbar-header .navbar-toggle {
     border: 0;
     background: transparent;
@@ -480,7 +486,7 @@ footer .social i {
   }
 
   header {
-    background: rgba(225, 225, 225, 0.5);
+    background: rgba(235, 235, 225, 0.5);
     border-bottom: 2px solid #f2e6d9;
   }
 
