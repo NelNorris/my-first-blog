@@ -24,15 +24,15 @@ $brandtext: Lobster, courier, cursive;
 $subhead: Karla, courier, serif;
 
 // Font size
-$xs_font: 0.6em;
-$s_font: 0.7em;
-$m_font: 1em;
-$mm_font: 1.1em;
-$mmm_font: 1.2em;
-$ml_font: 1.5em;
-$l_font: 2em;
-$xl_font: 2.4em;
-$xxl_font: 2.8em;
+$xs_font: 0.6rem;
+$s_font: 0.7rem;
+$m_font: 1rem;
+$mm_font: 1.1rem;
+$mmm_font: 1.2rem;
+$ml_font: 1.5rem;
+$l_font: 2rem;
+$xl_font: 2.4rem;
+$xxl_font: 2.8rem;
 
 // Spacing
 $xxs_space: 4px;
@@ -46,12 +46,36 @@ $big_space: 80px;
 
 $central_container: 750px;
 
+// Elements
+$navheight: 110px;
+$navpanda: 90px;
+$navpandapad: ($navheight - $navpanda) / 2;
+
 // Border
 $border_thin: 1px;
 $border_thick: 2px;
 
 // Images
 $panda: '../panda_place.jpg';
-$panda_width: 100px;
-$panda_height: 80px;
 $bamboo: '../bamboo_place.jpg';
+
+// Mixins
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

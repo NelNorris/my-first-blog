@@ -1,7 +1,10 @@
 *.pyc
 *~
 __pycache__
-myvenv
+myenv
+virt
+requirements
 db.sqlite3
 /static
 .DS_Store
+.sass-cache

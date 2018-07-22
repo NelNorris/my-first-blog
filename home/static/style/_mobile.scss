@@ -1,53 +1,71 @@
 @media screen and (max-width: 768px) {
-	nav.navbar.navbar-default {
-		margin-bottom: 0;
-		.container {
-			.row {
-				.navbar-header {
-					padding-left: 80px;
-					.navbar-toggle {
-						border: 0;
-						background: transparent;
-						padding: 12px $m_space;
-						margin-top: $m_space;
-						margin-right: $m_font;
-						margin-bottom: 0;
-						transform: rotate(0deg);
-						transition: transform 0.7s;
-						i {
-							font-size: $xxl_font;
-						}
-						&.collapsed {
-							transform: rotate(90deg);
-							transition: transform 0.7s;
-						}
+	nav.navbar {
+		font-family: $subhead;
+		border-bottom: $border_thick solid $contrastcolour;
+		.navwrap {
+			width: 100%;
+			max-width: $central_container;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: minmax(110px, 1fr) 50%;
+			grid-gap: 0 $l_space;
+		}
+		.nav-right {
+			text-align: center;
+			#nav-dropdown {
+				display: block;
+				width: 45px;
+				height: $xl_space;
+				margin: $xl_space $m_space;
+				float: right;
+				position: relative;
+				cursor: pointer;
+				.navblob {
+					position: absolute;
+					width: $m_space;
+					height: $m_space;
+					@include border-radius(50%);
+					top: 0;
+					right: 0;
+					left: 0;
+					background-color: $articlelight;
+					@include transition(top 0.35s);
+					@include transition(background-color 0.35s);
+					&:nth-of-type(2) {
+						top: 50%;
 					}
-					.navbar-brand {
-						padding-top: $xl_space;
-						padding-left: 0;
+					&:nth-of-type(3) {
+						top: 100%;
 					}
-					.navbar-nav {
-						li:hover {
-							background-color: $anchoraccent;
-							border-radius: $xs_space;
-							a {
-								color: $backgroundcolour;
-							}
-						}
-						li:focus {
-							background-color: $anchoraccent;
-							border-radius: $xs_space;
-							a {
-								color: $backgroundcolour;
-							}
-						}
-						li:active {
-							background-color: $anchoraccent;
-							border-radius: $xs_space;
-							a {
-								color: $backgroundcolour;
-							}
-						}
+				}
+				&.dropped {
+					.navblob {
+						background-color: $anchoraccent;
+					}
+				}
+			}
+			.navbar-nav {
+				display: none;
+				list-style: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				height: 0;
+				opacity: 0;
+				margin: 0;
+				padding: 0;
+				line-height: $navheight;
+				li {
+					vertical-align: middle;
+					display: block;
+					font-family: $headtext;
+					height: 0;
+					@include transition(height 0.35s);
+				}
+				&.drop {
+					display: block;
+					li {
+						height: auto;
+						@include transition(height 0.35s);
 					}
 				}
 			}
@@ -56,14 +74,19 @@
 	header {
 		background: $translucent;
 		border-bottom: $border_thick solid $contrastcolour;
+		padding: $xxl_space;
+		h1 {
+			margin: 0;
+		}
 	}
 	main {
+		padding: 0 $xxl_space;
 		.content {
 			margin-top: 0;
 			border-radius: 0;
 			border: 0;
 			background: transparent;
-			padding: $xs_font;
+			padding: $xxl_space 0;
 		}
 		.update {
 			padding-top: $xxl_space;
@@ -94,19 +117,6 @@
 			}
 			.calendar-display {
 				display: none;
-			}
-		}
-	}
-}
-@media screen and (max-width: 576px) {
-	nav.navbar.navbar-default {
-		.container {
-			.row {
-				.navbar-header {
-					.navbar-brand {
-						font-size: $xl_font;
-					}
-				}
 			}
 		}
 	}

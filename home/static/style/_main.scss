@@ -10,26 +10,12 @@ html {
 		padding: 0;
 		width: 100%;
 		height: 100%;
-		.container-fluid, container, .row {
-			padding: 0;
-			margin: 0;
-		}
-		.container-fluid.main {
+		.main {
 			position: relative;
 			left: 0;
 			top: 0;
 			min-height: 100%;
 			border-bottom: $border_thick solid $brandcolour;
-		}
-		.container {
-			width: 100%;
-			max-width: $central_container;
-			.row {
-				width: 100%;
-				max-width: $central_container;
-				height: auto;
-				margin: $m_font auto;
-			}
 		}
 		.bamboo {
 			position: fixed;
@@ -60,23 +46,21 @@ html {
 		a {
 			text-decoration: none;
 			color: $anchorcolour;
+			@include transition(color 0.35s);
 			&:hover {
 				text-decoration: none;
 				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
+				@include transition(color 0.35s);
 			}
 			&:focus {
 				text-decoration: none;
 				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
+				@include transition(color 0.35s);
 			}
 			&:active {
 				text-decoration: none;
 				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
+				@include transition(color 0.35s);
 			}
 		}
 		br {
@@ -88,7 +72,7 @@ html {
 		.date {
 			font-size: $s_font;
 			color: $subheadlight;
-			margin-bottom: $m_space;
+			margin: 0 0 $m_space;
 		}
 		.small {
 			font-size: $s_font;
@@ -97,88 +81,88 @@ html {
 	}
 }
 
-nav.navbar.navbar-default {
-	background-color: $backgroundcolour;
-	border: 0;
-	border-radius: 0;
+nav.navbar {
+	font-family: $subhead;
 	border-bottom: $border_thick solid $contrastcolour;
-	.container {
-		.row {
-			.navbar-header {
-				padding-left: $panda_width;
-				height: $panda_height;
-				margin-left: 0;
-				background: url($panda) no-repeat;
-				background-position: left center;
-				background-size: auto 100%;
+	.navwrap {
+		width: 100%;
+		max-width: $central_container;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: minmax(110px, 1fr) 50%;
+		grid-gap: 0 $l_space;
+	}
+	.nav-left {
+		text-align: left;
+		line-height: $navheight;
+		background: url($panda) no-repeat;
+		background-size: $navpanda $navpanda;
+		background-position: $navpandapad $navpandapad;
+		a {
+			padding-left: $navheight;
+			display: block;
+			font-family: $brandtext;
+			font-size: $xl_font;
+		}
+	}
+	.nav-right {
+		text-align: center;
+		#nav-dropdown {
+			display: none;
+		}
+		.navbar-nav {
+			list-style: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+			line-height: $navheight;
+			li {
+				vertical-align: middle;
+				display: inline-block;
+				font-family: $headtext;
 				a {
-					font-family: $brandtext;
-					color: $contrastdark;
-					font-weight: bold;
-					font-style: italic;
-					font-size: $xxl_font;
-					margin-left: 0;
-				}
-			}
-			.navbar-nav {
-				float: right;
-				a {
-					line-height: $xxl_space;
-					font-family: $headtext;
 					color: $subheadcolour;
-					text-transform: uppercase;
-					font-weight: bold;
+					text-decoration: none;
+					padding: $xxl_space $l_space;
+					@include transition(color 0.35s);
 					&:hover {
-						color: $anchoraccent;
 						text-decoration: underline;
-						transition: color 0.35s;
-						-webkit-transition: color 0.35s;
+						color: $anchoraccent;
+						@include transition(color 0.35s);
 					}
 					&:focus {
-						color: $anchoraccent;
 						text-decoration: underline;
-						transition: color 0.35s;
-						-webkit-transition: color 0.35s;
+						color: $anchoraccent;
+						@include transition(color 0.35s);
 					}
 					&:active {
-						color: $anchoraccent;
 						text-decoration: underline;
-						transition: color 0.35s;
-						-webkit-transition: color 0.35s;
+						color: $anchoraccent;
+						@include transition(color 0.35s);
 					}
 				}
-			}
-			.navbar-brand:focus {
-				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
-			}
-			.navbar-brand:hover {
-				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
-			}
-			.navbar-brand:active {
-				color: $anchoraccent;
-				transition: color 0.35s;
-				-webkit-transition: color 0.35s;
 			}
 		}
 	}
 }
 
+header {
+	h1 {
+		margin: $big_space auto $l_space;
+	}
+}
+
 main {
 	opacity: 0.99;
-	.container-fluid {
-		opacity: 0.99;
-		min-height: 100%;
-	}
 	.content {
 		background: $translucent;
 		border-radius: $m_space;
 		border: $border_thick solid $bordercolour;
-		margin: 0 auto $big_space;
-		padding: 0 $xxl_space $xxl_space;
+		margin: 0 auto $navheight;
+		padding: $xxl_space;
+		width: 100%;
+		max-width: $central_container;
 	}
 }
 
@@ -191,11 +175,9 @@ footer {
 	margin-top: $m_font;
 	.social {
 		text-align: center;
-		&:first-child {
-			margin-top: $xl_font;
-		}
-		p {
-			font-size: $mmm_font;
+		list-style: none;
+		li {
+			display: inline-block;
 		}
 		i {
 			margin-right: $m_font;

@@ -42,17 +42,21 @@
 			padding: $xs_space $m_space;
 			background-color: $backgroundcolour;
 			border-radius: $xs_space;
+			@include transition(background-color 0.35s);
 			&:focus {
 				background-color: $anchoraccent;
 				color: $backgroundcolour;
+				@include transition(background-color 0.35s);
 			}
 			&:hover {
 				background-color: $anchoraccent;
 				color: $backgroundcolour;
+				@include transition(background-color 0.35s);
 			}
 			&:active {
 				background-color: $anchoraccent;
 				color: $backgroundcolour;
+				@include transition(background-color 0.35s);
 			}
 		}
 		i {
