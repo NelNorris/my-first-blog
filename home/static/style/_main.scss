@@ -66,6 +66,10 @@ html {
 		br {
 			font-family: sans-serif;
 		}
+		abbr {
+			text-decoration: none;
+			cursor: help;
+		}
 		.emph {
 			text-transform: uppercase;
 		}
@@ -103,6 +107,7 @@ nav.navbar {
 			display: block;
 			font-family: $brandtext;
 			font-size: $xl_font;
+			@include transition(all 0.3s);
 		}
 	}
 	.nav-right {
@@ -155,14 +160,16 @@ header {
 
 main {
 	opacity: 0.99;
-	.content {
+	.container {
 		background: $translucent;
 		border-radius: $m_space;
 		border: $border_thick solid $bordercolour;
 		margin: 0 auto $navheight;
-		padding: $xxl_space;
 		width: 100%;
 		max-width: $central_container;
+		.content {
+			padding: $xxl_space;
+		}
 	}
 }
 
@@ -180,7 +187,7 @@ footer {
 			display: inline-block;
 		}
 		i {
-			margin-right: $m_font;
+			margin-right: $xl_space;
 			font-size: $l_font;
 		}
 	}

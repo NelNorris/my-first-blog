@@ -34,33 +34,30 @@
 		text-align: center;
 		font-style: italic;
 	}
-	.return {
-		text-align: right;
-		font-family: $headtext;
-		text-transform: uppercase;
-		a {
-			padding: $xs_space $m_space;
-			background-color: $backgroundcolour;
-			border-radius: $xs_space;
-			@include transition(background-color 0.35s);
-			&:focus {
-				background-color: $anchoraccent;
-				color: $backgroundcolour;
-				@include transition(background-color 0.35s);
-			}
-			&:hover {
-				background-color: $anchoraccent;
-				color: $backgroundcolour;
-				@include transition(background-color 0.35s);
-			}
-			&:active {
-				background-color: $anchoraccent;
-				color: $backgroundcolour;
-				@include transition(background-color 0.35s);
-			}
+}
+.return {
+	text-align: right;
+	font-family: $headtext;
+	text-transform: uppercase;
+	a {
+		padding: $m_space;
+		background-color: $backgroundcolour;
+		@include border-radius($xs_space);
+		@include transition(all 0.35s);
+		&:focus {
+			background-color: $anchoraccent;
+			color: $backgroundcolour;
 		}
-		i {
-			font-size: $mm_font;
+		&:hover {
+			background-color: $anchoraccent;
+			color: $backgroundcolour;
 		}
+		&:active {
+			background-color: $anchoraccent;
+			color: $backgroundcolour;
+		}
+	}
+	i {
+		font-size: $mm_font;
 	}
 }

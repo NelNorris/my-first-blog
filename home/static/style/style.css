@@ -80,6 +80,10 @@ html body a:active {
 html body br {
   font-family: sans-serif;
 }
+html body abbr {
+  text-decoration: none;
+  cursor: help;
+}
 html body .emph {
   text-transform: uppercase;
 }
@@ -117,6 +121,10 @@ nav.navbar .nav-left a {
   display: block;
   font-family: Lobster, courier, cursive;
   font-size: 2.4rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
 nav.navbar .nav-right {
   text-align: center;
@@ -178,14 +186,16 @@ header h1 {
 main {
   opacity: 0.99;
 }
-main .content {
+main .container {
   background: rgba(235, 235, 225, 0.5);
   border-radius: 10px;
   border: 2px solid #e7e7e7;
   margin: 0 auto 110px;
-  padding: 40px;
   width: 100%;
   max-width: 750px;
+}
+main .container .content {
+  padding: 40px;
 }
 
 footer {
@@ -204,7 +214,7 @@ footer .social li {
   display: inline-block;
 }
 footer .social i {
-  margin-right: 1rem;
+  margin-right: 28px;
   font-size: 2rem;
 }
 
@@ -245,45 +255,36 @@ footer .social i {
   text-align: center;
   font-style: italic;
 }
-.post .return {
+
+.return {
   text-align: right;
   font-family: Josefin Slab, courier, serif;
   text-transform: uppercase;
 }
-.post .return a {
-  padding: 5px 10px;
+.return a {
+  padding: 10px;
   background-color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-transition: background-color 0.35s;
-  -moz-transition: background-color 0.35s;
-  -ms-transition: background-color 0.35s;
-  transition: background-color 0.35s;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  transition: all 0.35s;
 }
-.post .return a:focus {
+.return a:focus {
   background-color: #3434b7;
   color: #ffffff;
-  -webkit-transition: background-color 0.35s;
-  -moz-transition: background-color 0.35s;
-  -ms-transition: background-color 0.35s;
-  transition: background-color 0.35s;
 }
-.post .return a:hover {
+.return a:hover {
   background-color: #3434b7;
   color: #ffffff;
-  -webkit-transition: background-color 0.35s;
-  -moz-transition: background-color 0.35s;
-  -ms-transition: background-color 0.35s;
-  transition: background-color 0.35s;
 }
-.post .return a:active {
+.return a:active {
   background-color: #3434b7;
   color: #ffffff;
-  -webkit-transition: background-color 0.35s;
-  -moz-transition: background-color 0.35s;
-  -ms-transition: background-color 0.35s;
-  transition: background-color 0.35s;
 }
-.post .return i {
+.return i {
   font-size: 1.1rem;
 }
 
@@ -424,12 +425,10 @@ footer .social i {
   font-weight: bold;
   text-transform: uppercase;
   color: #717171;
+  cursor: pointer;
 }
 .doodle .calendar-list li.active {
   color: #444444;
-}
-.doodle .calendar-list #calendar-prev, .doodle .calendar-list #calendar-next {
-  font-size: 2.4rem;
 }
 
 .update {
@@ -474,35 +473,30 @@ footer .social i {
   }
   nav.navbar .nav-right {
     text-align: center;
+    position: relative;
   }
   nav.navbar .nav-right #nav-dropdown {
     display: block;
-    width: 45px;
-    height: 28px;
-    margin: 28px 10px;
+    height: 24px;
+    margin: 40px 40px 0 0;
     float: right;
-    position: relative;
     cursor: pointer;
+    position: relative;
+    width: 40px;
   }
   nav.navbar .nav-right #nav-dropdown .navblob {
+    opacity: 1;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    height: 5px;
+    margin-bottom: 6px;
     top: 0;
     right: 0;
     left: 0;
-    background-color: #717171;
-    -webkit-transition: top 0.35s;
-    -moz-transition: top 0.35s;
-    -ms-transition: top 0.35s;
-    transition: top 0.35s;
-    -webkit-transition: background-color 0.35s;
-    -moz-transition: background-color 0.35s;
-    -ms-transition: background-color 0.35s;
-    transition: background-color 0.35s;
+    background-color: #00b32d;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    transition: all 0.35s;
   }
   nav.navbar .nav-right #nav-dropdown .navblob:nth-of-type(2) {
     top: 50%;
@@ -510,39 +504,71 @@ footer .social i {
   nav.navbar .nav-right #nav-dropdown .navblob:nth-of-type(3) {
     top: 100%;
   }
-  nav.navbar .nav-right #nav-dropdown.dropped .navblob {
-    background-color: #3434b7;
+  nav.navbar .nav-right #nav-dropdown.dropped .navblob:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  nav.navbar .nav-right #nav-dropdown.dropped .navblob:nth-of-type(2) {
+    opacity: 0;
+  }
+  nav.navbar .nav-right #nav-dropdown.dropped .navblob:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 50%;
   }
   nav.navbar .nav-right .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
     display: none;
     list-style: none;
     text-transform: uppercase;
     font-weight: bold;
+    -webkit-border-radius: 0 0 0 4px;
+    -moz-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px;
+    border-left: 1px solid #f2e6d9;
+    border-bottom: 1px solid #f2e6d9;
+    border-top: 2px solid #f2e6d9;
+    box-shadow: -2px 6px 10px 2px #e7e7e7;
+    background-color: #ffffff;
     height: 0;
     opacity: 0;
     margin: 0;
     padding: 0;
-    line-height: 110px;
+    line-height: 80px;
+    z-index: 1;
   }
   nav.navbar .nav-right .navbar-nav li {
     vertical-align: middle;
     display: block;
     font-family: Josefin Slab, courier, serif;
+    border-bottom: 1px solid #f2e6d9;
     height: 0;
-    -webkit-transition: height 0.35s;
-    -moz-transition: height 0.35s;
-    -ms-transition: height 0.35s;
-    transition: height 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  nav.navbar .nav-right .navbar-nav li a {
+    display: block;
+    padding: 18px 40px;
+  }
+  nav.navbar .nav-right .navbar-nav li:last-child {
+    border-bottom: 0;
   }
   nav.navbar .nav-right .navbar-nav.drop {
     display: block;
+    opacity: 1;
+    height: auto;
   }
   nav.navbar .nav-right .navbar-nav.drop li {
     height: auto;
-    -webkit-transition: height 0.35s;
-    -moz-transition: height 0.35s;
-    -ms-transition: height 0.35s;
-    transition: height 0.35s;
   }
 
   header {
@@ -555,14 +581,20 @@ footer .social i {
   }
 
   main {
-    padding: 0 40px;
+    padding: 0 18px;
   }
-  main .content {
+  main header {
+    padding: 0 0 4px;
+  }
+  main .container {
     margin-top: 0;
     border-radius: 0;
     border: 0;
     background: transparent;
     padding: 40px 0;
+  }
+  main .container .content {
+    padding: 0;
   }
   main .update {
     padding-top: 40px;
@@ -583,11 +615,24 @@ footer .social i {
   main .post .caption {
     font-size: 1rem;
   }
+  main .return a {
+    background-color: #3434b7;
+    color: #ffffff;
+  }
   main .doodle .panel {
     padding: 1rem;
   }
   main .doodle .calendar-display {
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav.navbar .navwrap .nav-left .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0 10px;
   }
 }
 

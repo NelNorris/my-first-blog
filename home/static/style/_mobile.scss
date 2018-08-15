@@ -12,25 +12,25 @@
 		}
 		.nav-right {
 			text-align: center;
+			position: relative;
 			#nav-dropdown {
 				display: block;
-				width: 45px;
-				height: $xl_space;
-				margin: $xl_space $m_space;
+				height: 24px;
+				margin: $xxl_space $xxl_space 0 0;
 				float: right;
-				position: relative;
 				cursor: pointer;
+				position: relative;
+				width: $xxl_space;
 				.navblob {
+					opacity: 1;
 					position: absolute;
-					width: $m_space;
-					height: $m_space;
-					@include border-radius(50%);
+					height: 5px;
+					margin-bottom: 6px;
 					top: 0;
 					right: 0;
 					left: 0;
-					background-color: $articlelight;
-					@include transition(top 0.35s);
-					@include transition(background-color 0.35s);
+					background-color: $brandcolour;
+					@include transition(all 0.35s);
 					&:nth-of-type(2) {
 						top: 50%;
 					}
@@ -39,33 +39,60 @@
 					}
 				}
 				&.dropped {
-					.navblob {
-						background-color: $anchoraccent;
+					.navblob:nth-of-type(1) {
+						@include transform(rotate(45deg));
+						top: 50%;
+					}
+					.navblob:nth-of-type(2) {
+						opacity: 0;
+					}
+					.navblob:nth-of-type(3) {
+						@include transform(rotate(-45deg));
+						top: 50%;
 					}
 				}
 			}
 			.navbar-nav {
+				position: absolute;
+				top: 100%;
+				right: 0;
 				display: none;
 				list-style: none;
 				text-transform: uppercase;
 				font-weight: bold;
+				@include border-radius(0 0 0 $xxs_space);
+				border-left: 1px solid $contrastcolour;
+				border-bottom: 1px solid $contrastcolour;
+				border-top: 2px solid $contrastcolour;
+				box-shadow: -2px 6px 10px 2px $bordercolour;
+				background-color: $backgroundcolour;
 				height: 0;
 				opacity: 0;
 				margin: 0;
 				padding: 0;
-				line-height: $navheight;
+				line-height: $big_space;
+				z-index: 1;
 				li {
 					vertical-align: middle;
 					display: block;
 					font-family: $headtext;
+					border-bottom: 1px solid $contrastcolour;
 					height: 0;
-					@include transition(height 0.35s);
+					@include transition(all 0.35s);
+					a {
+						display: block;
+						padding: $l_space $xxl_space;
+					}
+					&:last-child {
+						border-bottom: 0;
+					}
 				}
 				&.drop {
 					display: block;
+					opacity: 1;
+					height: auto;
 					li {
 						height: auto;
-						@include transition(height 0.35s);
 					}
 				}
 			}
@@ -80,13 +107,19 @@
 		}
 	}
 	main {
-		padding: 0 $xxl_space;
-		.content {
+		padding: 0 $l_space;
+		header {
+			padding: 0 0 $xxs_space;
+		}
+		.container {
 			margin-top: 0;
 			border-radius: 0;
 			border: 0;
 			background: transparent;
 			padding: $xxl_space 0;
+			.content {
+				padding: 0;
+			}
 		}
 		.update {
 			padding-top: $xxl_space;
@@ -111,6 +144,12 @@
 				font-size: $m_font;
 			}
 		}
+		.return {
+			a {
+				background-color: $anchoraccent;
+				color: $backgroundcolour;
+			}
+		}
 		.doodle {
 			.panel {
 				padding: $m_font;
@@ -119,5 +158,19 @@
 				display: none;
 			}
 		}
+	}
+}
+@media screen and (max-width: 480px) {
+	nav.navbar {
+		.navwrap {
+			.nav-left {
+				.navbar-brand {
+					font-size: $ml_font;
+				}
+			}
+		}
+	}
+	main {
+		padding: 0 $m_space;
 	}
 }

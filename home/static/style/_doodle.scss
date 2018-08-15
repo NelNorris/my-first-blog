@@ -133,12 +133,10 @@
 			font-weight: bold;
 			text-transform: uppercase;
 			color: $articlelight;
+			cursor: pointer;
 			&.active {
 				color: $subheadcolour;
 			}
-		}
-		#calendar-prev, #calendar-next {
-			font-size: $xl_font;
 		}
 	}
 }
